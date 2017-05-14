@@ -8,7 +8,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
-wpa_supplicant_overlay.conf
+    wpa_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \

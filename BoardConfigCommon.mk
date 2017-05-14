@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/wileyfox/msm8937-common
+MSM_PATH := device/wileyfox/msm8937-common
 
 # Include board config fragments
-include $(DEVICE_PATH)/board/*.mk
+include $(MSM_PATH)/board/*.mk
