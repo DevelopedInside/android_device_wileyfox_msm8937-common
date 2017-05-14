@@ -33,7 +33,3 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
         $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 endif
 
-#----------------------------------------------------------------------
-# extra images
-#----------------------------------------------------------------------
-include device/qcom/common/generate_extra_images.mk

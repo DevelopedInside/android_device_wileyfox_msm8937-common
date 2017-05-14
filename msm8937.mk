@@ -15,4 +15,4 @@
 #
 
 # Include package config fragments
-include $(DEVICE_PATH)/product/*.mk
+include $(LOCAL_PATH)/product/*.mk

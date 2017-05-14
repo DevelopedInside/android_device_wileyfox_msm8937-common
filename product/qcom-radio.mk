@@ -1,3 +1,9 @@
+# RIL
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig \
+    librmnetctl \
+    libxml2
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -36,8 +42,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.fast.dormancy.rule=0 \
     ro.ril.hsxpa=0
 
-# RIL
-PRODUCT_PACKAGES += \
-    libcnefeatureconfig \
-    librmnetctl \
-    libxml2
