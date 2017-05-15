@@ -9,5 +9,5 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml
+#PRODUCT_COPY_FILES += \
+#    frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml
