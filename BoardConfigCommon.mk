@@ -15,5 +15,7 @@
 
 MSM_PATH := device/wileyfox/msm8937-common
 
+PRODUCT_COPY_FILES := $(filter-out frameworks/base/data/keyboards/Generic.kl:system/usr/keylayout/Generic.kl , $(PRODUCT_COPY_FILES))
+
 # Include board config fragments
 include $(MSM_PATH)/board/*.mk

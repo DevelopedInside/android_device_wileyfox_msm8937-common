@@ -4,7 +4,7 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     hostapd \
     wpa_supplicant \
-    wpa_supplicant.conf 
+    wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
@@ -28,8 +28,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
-
-# Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
 

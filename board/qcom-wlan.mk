@@ -1,3 +1,6 @@
+# Wifi
+TARGET_PROVIDES_WCNSS_QMI := true
+
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
