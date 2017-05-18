@@ -1,6 +1,6 @@
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8937
+    gps.default
 
 # Permissions
 PRODUCT_COPY_FILES += \
