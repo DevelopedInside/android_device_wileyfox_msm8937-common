@@ -1,4 +1,5 @@
 /*
+   Copyright (c) 2016, The CyanogenMod Project
    Copyright (c) 2017, The LineageOS Project
 
    Redistribution and use in source and binary forms, with or without
@@ -27,19 +28,15 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <cstdlib>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <string>
 
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
-
-static char board_id[PROP_VALUE_MAX];
-
-void init_target_properties()
-{
-}
 
 static int read_file2(const char *fname, char *data, int max_size)
 {
@@ -68,9 +65,9 @@ static void init_alarm_boot_properties()
 {
     char const *alarm_file = "/proc/sys/kernel/boot_reason";
     char buf[64];
-    char tmp[PROP_VALUE_MAX];
+    //char tmp[PROP_VALUE_MAX];
 
-    property_get("ro.boot.alarmboot", tmp);
+    //property_get("ro.boot.alarmboot", tmp);
 
     if (read_file2(alarm_file, buf, sizeof(buf))) {
         /*
@@ -88,7 +85,8 @@ static void init_alarm_boot_properties()
          * 7 -> CBLPWR_N pin toggled (for external power supply)
          * 8 -> KPDPWR_N pin toggled (power key pressed)
          */
-        if (buf[0] == '3' || !strcmp(tmp,"true"))
+        //if (buf[0] == '3' || !strcmp(tmp,"true"))
+        if (buf[0] == '3')
             property_set("ro.alarm_boot", "true");
         else
             property_set("ro.alarm_boot", "false");
@@ -97,6 +95,5 @@ static void init_alarm_boot_properties()
 
 void vendor_load_properties()
 {
-    init_target_properties();
     init_alarm_boot_properties();
 }
